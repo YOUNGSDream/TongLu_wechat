@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "switch": "/components/switch/switch"
+  },
+  "navigationBarTitleText": "站点视频情况"
+}

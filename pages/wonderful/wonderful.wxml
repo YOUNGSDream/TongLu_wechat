@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 圆弧 -->
+<view class="yuanhu">
+<image src="../../imgs/yuanhu.png"></image>
+</view>
+<!-- 圆弧 -->
+  <view class="videoContianer" wx:for="{{list}}" data-index='{{index}}' wx:key="item.src">
+    <view class="videoControl">
+      <view class="videoLeft" bindtap='gotoThreeDay' data-index='{{index}}'>
+        <image src='{{item.iconSrc[0]}}'></image>
+        <text>{{item.text}}</text>
+      </view>
+      <!-- <view class="videoRight">
+        <image src='{{item.iconSrc[1]}}' class="like"></image>
+        <text>{{item.playNumbers}}</text>
+        <button open-type="share" bindtap='share' data-index='{{index}}'><image src='{{item.iconSrc[3]}}' class="more"></image></button>
+        <text class="shareText">{{item.shareNumbers}}</text>
+      </view> -->
+    </view>
+  <view class="videoPlayer">
+    <image class="coverImage" bindtap='changeToStationPage' data-index='{{index}}' src="{{item.src}}" ></image>
+   <image class="beginButton" bindtap='changeToStationPage'  data-index='{{index}}' src="{{videoBegin}}"></image>
+  </view>
+
+
+
+    <view class="videoShare">
+        <view class="shareButton">
+         <button open-type="button" bindtap=''><image src='{{item.iconSrc[1]}}' class="like"></image></button>
+          <text class="text1">播放次数</text>
+        <text class="text2">{{item.playNumbers}}</text>
+      </view>
+      <view class="shareButton">
+        <button open-type="button" bindtap='dianzan' data-index='{{index}}'><image src='{{item.iconSrc[2]}}' class="more"></image></button>
+          <text class="text1">点赞</text>
+        <text class="text2">{{item.likedNumbers}}</text>
+       </view>
+       <view class="shareButton">
+        <button open-type="share" bindtap='share' data-index='{{index}}'><image src='{{item.iconSrc[3]}}' class="more"></image></button>
+          <text class="text1">分享</text>
+        <text class="text2">{{item.shareNumbers}}</text>
+       </view>
+       
+    </view>
+
+
+
+      <view class="decoration">
+      <view class="decorationText">
+        {{item.textDecoration}}
+      </view>
+    </view>
+    <!-- <view class="spiltLine"></view> -->
+  </view>  
+   <switch id="switch" bindtouchstart="buttonStart" bindtouchmove="buttonMove" bindtouchend="buttonEnd"  bindtap='switchChange' src="{{switchURL}}" style="top:{{buttonTop}}px;left:{{buttonLeft}}px; width: 70px;height:70px;border-radius:50%;position: fixed;z-index: 10000;"  ></switch>
+</view>

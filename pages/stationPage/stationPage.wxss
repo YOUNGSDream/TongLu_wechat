@@ -1,0 +1,333 @@
+/* pages/stationMonitor.wxss */
+page{
+   background: #FAF8FB;
+
+}
+.yuanhu{
+  width: 100%;
+  height: 120rpx;
+  /* background: red; */
+  z-index: -1;
+  position: absolute;
+}
+.yuanhu image{
+  width: 100%;
+  height: 100%;
+}
+.contianer{
+  width: 100%;
+  height: 100%;
+}
+.blockTop{
+  box-shadow:    0px -1px 2px 0px rgb(240, 239, 239),   /*上边阴影  红色*/
+
+                -1px 0px 2px 0px rgb(240, 239, 239),   /*左边阴影  绿色*/
+
+                1px 0px 2px 0px rgb(240, 239, 239),    /*右边阴影  蓝色*/
+
+                0px 1px 2px 0px rgb(240, 239, 239);    /*下边阴影  黄色*/
+  width:90%;
+  margin: 0 auto;
+   border-radius: 10rpx;
+   overflow: hidden;
+   background: #FEFEFE;
+}
+.blockBottom{
+  display: block;
+  width:100%;
+  height: 60%;
+  background: #FAF8FB;
+}
+.videoPlayer{
+  width:96%;
+border-radius:12rpx;
+overflow:hidden;
+margin:0 auto;
+height:360rpx;
+margin-left:2%;
+
+}
+.coverText{
+   display: block;
+  white-space: pre-line;
+  width: 100%;
+  color: #eeeeee;
+  font-size: 25rpx;
+  padding-left: 15rpx;
+  padding-top: 5rpx;
+  box-sizing: border-box;
+  word-break: break-all;
+  letter-spacing:2rpx;
+}
+.coverTime{
+   display: block;
+  white-space: pre-line;
+  width: 100%;
+  color: white;
+  font-size: 22rpx;
+  padding-right: 15rpx;
+  padding-top: 5rpx;
+  box-sizing: border-box;
+  word-break: break-all;
+  text-align: right;
+}
+.videoControl{
+  width:100%;
+  height:60rpx;
+  background:white;
+  margin-bottom:10rpx;
+  overflow: hidden;
+}
+.videoLeft{
+  width:40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+.videoRight{
+   width:40%;
+  height: 100%;
+  float: right;
+  display: flex;
+  align-items:center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  padding-right:20rpx;
+}
+.videoRight image{
+  width:45rpx;
+  height:45rpx;
+  margin-left: 10rpx;
+  margin-right:5rpx;
+}
+.videoLeft image{
+  width:45rpx;
+  height:45rpx;
+  margin-left: 10rpx;
+  margin-right:5rpx;
+}
+.videoRight text{
+  font-size: 25rpx;
+}
+.videoRight .shareText{
+  margin-right:20rpx;
+  font-size: 25rpx;
+}
+.videoLeft text{
+   text-decoration: none;
+  font-size: 30rpx;
+  color:#7F7F81; 
+}
+.videoLeft .shareText{
+  margin-right:20rpx;
+  font-size: 25rpx;
+}
+.spiltLine{
+  width: 100%;
+  height: 15rpx;
+  margin-top: 10rpx;
+  background: #FAF8FB;
+}
+.airTitle{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}
+.airTitle span{
+  font-size: 32rpx;
+  line-height: 32rpx; 
+}
+.airTitle span:nth-child(1){
+  display: inline-block;
+  height: 35rpx;
+  width: 10rpx;
+  background: #44C1F4;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.airPie{
+  width: 100%;
+  height:350rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.aqi{
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.aqiNumber{
+  font-size: 100rpx;
+  color:#F29901;
+  letter-spacing: 10rpx;
+  padding-bottom: 10rpx;
+}
+.aqiTitle{
+  font-size:40rpx;
+  color: rgb(56, 52, 52);
+}
+.airPieRight{
+  width: 100%;
+  height: 16%;
+  display: flex;
+justify-content: space-around;
+flex-direction: row;
+}
+
+.airLevel{
+  width: 60%;
+  height: 100%;
+  display: flex;
+
+justify-content: space-between;
+flex-direction: row;
+}
+.airItem{
+  width:90rpx;
+  height:90rpx;
+  border-radius: 15rpx;
+}
+.itemSpan{
+  width: 100%;
+  height: 50%;
+  margin-right: 8rpx;
+  border-radius: 10rpx;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.itemSpan span{
+  display: block;
+  width:24rpx;
+  height:24rpx;
+  border-radius:12rpx;
+
+}
+.itemTextBox{
+  display: block;
+  width:100%;
+  height: 50%;
+  text-align: center;
+  font-size: 24rpx;
+}
+.airItem:nth-child(1) .itemSpan span{
+    background: #9B4E7B;
+}
+.airItem:nth-child(2) .itemSpan span{
+  background: #7B67D0;
+}
+.airItem:nth-child(3) .itemSpan span{
+  background: #DE6A58;
+}
+.airItem:nth-child(4) .itemSpan span{
+  background: #F29901;
+}
+.airItem:nth-child(5) .itemSpan span{
+  background: #FDE701;
+}
+.airItem:nth-child(6) .itemSpan span{
+  background: #47E27D;
+}
+.pageChange{
+  width: 140rpx;
+  height:140rpx;
+  border-radius:50%;
+  position: fixed;
+  z-index: 10000;
+  right: 3%;
+  top: 50%;
+}
+.pageChange image{
+  width: 100%;
+  height: 100%;
+}
+.airLoading{
+  width:60%;
+  height: 60rpx;
+  margin:0 auto;
+  margin-top:30rpx;
+}
+.airLoadingBar{
+  width:100%;
+  height:12rpx;
+  background:#E5E5E5;
+  border-radius:6rpx;
+  overflow: hidden;
+}
+.airLoadingTitle span{
+  font-size: 30rpx;
+  font-weight:bold;
+}
+.airLoadingTitle{
+  display: flex;
+  justify-content: space-between;
+}
+.pmexist{
+  width:40%;
+  height:100%;
+  border-radius: 6rpx;
+  background:#0483DD;
+}
+.o3exist{
+  width:60%;
+  height:100%;
+  border-radius: 6rpx;
+  background:#0483DD;
+}
+
+button::after{
+  border:0;
+}
+button{
+  padding:0;
+  margin: 0;
+  background: white;
+  top:11rpx;
+
+}
+.borDer{
+  border-radius:15rpx;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #EBEBEB;
+}
+.videoShare{
+  padding-top: 10rpx;
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.shareButton{
+  width:100rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start
+}
+.shareButton button,.shareButton image{
+  width: 75%;
+  height: 75rpx;
+   border-radius:50%;
+  
+}
+.shareButton button image{
+   width: 100%;
+  height: 100%;
+}
+.shareButton button{
+  border-radius:50%;
+}
+.shareButton .text1{
+  margin-top: 10rpx;
+  font-size: 25rpx;
+}
+.shareButton .text2{
+  font-size: 24rpx;
+  color: gray;
+}

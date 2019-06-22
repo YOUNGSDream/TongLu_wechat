@@ -1,0 +1,89 @@
+<!--pages/stationMonitor.wxml-->
+<view class="contianer">
+<!-- 圆弧 -->
+<view class="yuanhu">
+<image src="../../imgs/yuanhu.png"></image>
+</view>
+<!-- 圆弧 -->
+<view class="blockTop">
+<view class="videoControl">
+<view class="videoLeft">
+<image src='{{location}}' class="more"></image>
+  <text>{{sideLocation}}</text>
+</view>
+   
+    </view>
+  <video class="videoPlayer" autoplay controls  object-fit="fill"  bindended ="videoBegin" src="{{videoSrc}}">
+  </video>
+  <view class="videoShare">
+  <view class="shareButton">
+  <button open-type="button" bindtap=''> <image src='{{iconSrc[2]}}' class="more"></image></button>
+   <text  class="text1">播放次数</text>
+  <text  class="text2">{{playNumber}}</text>
+  </view>
+
+  <view class="shareButton">
+  <button open-type="" bindtap="dianZan" ><image src='{{iconSrc[0]}}' class="like"></image></button>
+  <text  class="text1">点赞</text>
+        <text  class="text2">{{likeNumber}}</text>
+  </view>
+
+  <view class="shareButton">
+   <button open-type="share" bindtap='share' ><image src='{{iconSrc[1]}}' class="share"></image></button>
+   <text  class="text1">分享</text>
+        <text class="text2">{{shareNumber}}</text>
+        
+  </view>
+  </view>
+</view>
+<view class="blockBottom">
+<view class="spiltLine"></view>
+
+  <view class="airTitle">
+      <span class="blueSpan"></span>
+      <span>空气质量指数日均值</span>
+  </view>
+ 
+  <view class="aqi">
+    <text class="aqiNumber" style="color:{{pm25BackgroundColor}}">{{aqiValue}}</text>
+    <text class="aqiTitle">AQI</text>
+  </view>
+  <view class="airPieRight">
+    <ul class="airLevel" >
+        <li class="airItem" wx:for="{{airLevelArr}}" >
+        <view style="width:100%;height:100%" class="{{item.classes}}">
+        
+       
+        <view class="itemSpan ">
+          <span></span>
+        </view>
+        <span class="itemTextBox">{{item.text}}</span>
+         </view>
+        </li>
+        
+    </ul>
+  </view>
+  <view class="airLoading">
+  <view class="airLoadingTitle">
+  <span>PM2.5</span>
+  <span>{{pm25Value}}</span>
+  </view>
+  <view class="airLoadingBar">
+  <view class="pmexist" style="background-color:{{pmLevel}} ;width:{{pmLevelWidth}}%"></view>
+  </view>
+  </view>
+  <view class="airLoading">
+  <view class="airLoadingTitle">
+  <span>O₃</span>
+  <span>{{o3Value}}</span>
+  </view>
+  <view class="airLoadingBar">
+  <view class="o3exist" style="background-color:{{o3Level}} ;width:{{o3LevelWidth}}%"></view>
+  </view>
+  </view>
+ 
+ 
+
+</view>
+<switch id="switch" bindtouchstart="buttonStart" bindtouchmove="buttonMove" bindtouchend="buttonEnd"  bindtap='switchChange' style="top:{{buttonTop}}px;left:{{buttonLeft}}px; width: 70px;height:70px;border-radius:50%;position: fixed;z-index: 10000;"  src="{{switchURL}}"></switch>
+</view>

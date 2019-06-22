@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 圆弧 -->
+<view class="yuanhu">
+<image src="../../imgs/yuanhu.png"></image>
+</view>
+<!-- 圆弧 -->
+  <view class="videoContianer" wx:for="{{list}}" wx:key="item.src">
+   <view class="videoControl">
+      <view class="videoLeft">
+        <image src='{{item.iconSrc[0]}}' ></image>
+        <text>{{item.text}}</text>
+      </view>
+      
+    </view>
+  <view class="videoPlayer">
+    <image class="coverImage" bindtap='toZhiBoVideo'  data-index='{{index}}' src="{{item.src}}" >
+    </image>
+     <image class="beginButton" bindtap='toZhiBoVideo'  data-index='{{index}}' src="{{videoBegin}}"></image>
+  </view>
+  <view class="videoShare">
+      <view class="shareButton">
+        <button open-type="button" bindtap=''><image src='{{item.iconSrc[2]}}' class="share" ></image></button>
+          <text class="text3">在线:{{item.onlineNumber}}</text>
+        <!-- <text class="text2">123</text> -->
+      </view>
+         <view class="shareButton">
+           <button open-type="share" ><image src='{{item.iconSrc[1]}}' class="share" ></image></button>
+          <text class="text3">分享</text>
+        <!-- <text class="text2">123</text> -->
+      </view>
+   </view>
+   
+   
+    <view class="decoration">
+      <view class="decorationText">
+        {{item.textDecoration}}
+      </view>
+    </view>
+    <!-- <view class="spiltLine"></view> -->
+  </view>
+  <switch id="switch"  src="{{switchURL}}"  bindtouchstart="buttonStart" bindtouchmove="buttonMove" bindtouchend="buttonEnd" bindtap='switchChange' style="top:{{buttonTop}}px;left:{{buttonLeft}}px; width: 70px;height:70px;border-radius:50%;position: fixed;z-index: 10000;" ></switch>
+
+</view>

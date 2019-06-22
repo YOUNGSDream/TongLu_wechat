@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wonderful/wonderful",
+    "pages/stationPage/stationPage",
+    "pages/threeDays/threeDays",
+    "pages/stationMonitor/stationMonitor",
+    "components/switch/switch"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#19B3F2",
+    "navigationBarTitleText": "高空瞭望平台",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 10
+  },
+  "sitemapLocation": "sitemap.json"
+}

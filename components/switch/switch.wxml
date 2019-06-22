@@ -1,0 +1,1 @@
+<view class="pageChange"> <image src="{{src}}"></image></view>

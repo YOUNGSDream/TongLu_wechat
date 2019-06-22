@@ -1,0 +1,74 @@
+<view class="contianer">
+<!-- 圆弧 -->
+<view class="yuanhu">
+<image src="../../imgs/yuanhu.png"></image>
+</view>
+<!-- 圆弧 -->
+  <view class="blockTop">
+     <view class="videoControl">
+    <view class="videoLeft">
+  <image src='{{locationSrc}}' class="more"></image>
+  <text>{{location}}</text>
+</view>
+ <view class="videoRight">
+        
+      </view>
+        </view>
+    <live-player id="liver-player1" class="videoPlayer" src="{{thisPageVideoUrl}}" autoplay     mode="live"   bindstatechange="statechange"  bindfullscreenchange="fullscreenchange">
+    <!-- 全屏按钮 -->
+     <cover-view class="cover">
+         <cover-view  wx:if="{{!isFull}}" bindtap="requestFullScreen">
+    <cover-image src="../../imgs/quanping.png"></cover-image>
+         </cover-view>                                       
+         <cover-view   wx:else bindtap="exitFullScreen">
+     <cover-image src="../../imgs/tuichuqaunping.png"> </cover-image>
+         </cover-view  >        
+  </cover-view>
+      <!-- 全屏按钮 -->
+    </live-player>
+  <view class="videoShare">
+    <view class="shareButton">
+   <button open-type="button" bindtap=''> <image src='{{iconSrc[2]}}' class="more"></image></button>
+  <text class="text3">在线人数：{{onlineNumber}}</text>
+    </view>
+    <view class="shareButton">
+     <button open-type="share"  ><image src='{{iconSrc[1]}}' class="share"></image></button>
+      <text class="text3">分享</text>
+      </view>
+     
+    </view>
+   
+
+  </view>
+  <view class="blockBottom"  hidden='{{isFull}}' >
+<view class="spiltLine"></view>
+
+<view class="airTitle">
+  <view class="airTitleLeft">
+      <span class="blueSpan"></span>
+      <span>近8小时空气质量</span>
+  </view>
+  <view class="airTitleright">更新时间：{{lastTime}}</view>
+
+</view>
+<view class="airPie">
+  <view class="airPieLeft">
+    <ec-canvas ec="{{airPie}}" id="airPie1"></ec-canvas>
+  </view>
+  <view class="airPieRight">
+    <ul class="airLevel">
+      <li class="airItem" wx:for="{{airLevelArr}}">
+            <span class="itemSpan"></span>{{item.text}}
+        </li>
+    </ul>
+  </view>
+</view>
+<view class="airLine1">
+ <ec-canvas ec="{{airLine}}" id="airLine1"></ec-canvas>
+</view>
+<view class="airLine2">
+ <ec-canvas ec="{{airLine2}}" id="airLine2"></ec-canvas>
+</view>
+</view>
+<switch id="switch"  bindtouchstart="buttonStart" bindtouchmove="buttonMove" bindtouchend="buttonEnd"  bindtap='switchChange'  style="top:{{buttonTop}}px;left:{{buttonLeft}}px; width: 70px;height:70px;border-radius:50%;position: fixed;z-index: 10000;" src="{{switchURL}}" ></switch>
+</view>

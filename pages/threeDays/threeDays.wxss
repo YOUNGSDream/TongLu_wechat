@@ -1,0 +1,225 @@
+/* pages/stationMonitor.wxss */
+page{
+  background: #FAF8FB;
+}
+.yuanhu{
+  width: 100%;
+  height: 120rpx;
+  /* background: red; */
+  z-index: -1;
+  position: absolute;
+}
+.yuanhu image{
+  width: 100%;
+  height: 100%;
+}
+.contianer{
+  width: 100%;
+  height: 100%;
+}
+.blockTop{
+  box-shadow:    0px -1px 2px 0px rgb(240, 239, 239),   /*上边阴影  红色*/
+
+                -1px 0px 2px 0px rgb(240, 239, 239),   /*左边阴影  绿色*/
+
+                1px 0px 2px 0px rgb(240, 239, 239),    /*右边阴影  蓝色*/
+
+                0px 1px 2px 0px rgb(240, 239, 239);    /*下边阴影  黄色*/
+  width:90%;
+  margin: 0 auto;
+   border-radius: 10rpx;
+   overflow: hidden;
+   background: #FEFEFE;
+}
+.blockBottom{
+   display: block;
+  width:100%;
+  height: 60%;
+  background: #FAF8FB;
+}
+.videoPlayer{
+   width:96%;
+border-radius:12rpx;
+overflow:hidden;
+margin:0 auto;
+height:360rpx;
+margin-left:2%;
+}
+.coverText{
+   display: block;
+  white-space: pre-line;
+  width: 100%;
+  color: #eeeeee;
+  font-size: 25rpx;
+  padding-left: 15rpx;
+  padding-top: 5rpx;
+  box-sizing: border-box;
+  word-break: break-all;
+  letter-spacing:2rpx;
+}
+.coverTime{
+   display: block;
+  white-space: pre-line;
+  width: 100%;
+  color: white;
+  font-size: 22rpx;
+  padding-right: 15rpx;
+  padding-top: 5rpx;
+  box-sizing: border-box;
+  word-break: break-all;
+  text-align: right;
+}
+.videoControl{
+   width:100%;
+  height:60rpx;
+  background:white;
+  margin-bottom:10rpx;
+  overflow: hidden;
+}
+.videoLeft{
+  width:40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+.videoRight{
+  width:40%;
+  height: 100%;
+  float: right;
+  display: flex;
+  align-items:center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  padding-right:20rpx;
+}
+.videoRight image{
+  width:45rpx;
+  height:45rpx;
+  margin-left: 10rpx;
+  margin-right:5rpx;
+}
+.videoRight text{
+  font-size: 25rpx;
+}
+.videoLeft image{
+  width:45rpx;
+  height:45rpx;
+  margin-left: 10rpx;
+  margin-right:5rpx;
+}
+.videoRight text{
+  font-size: 25rpx;
+}
+.videoRight .shareText{
+  margin-right:20rpx;
+  font-size: 25rpx;
+}
+.videoLeft text{
+  font-size: 25rpx;
+}
+.videoLeft .shareText{
+  margin-right:20rpx;
+  font-size: 25rpx;
+}
+.spiltLine{
+   width: 100%;
+  height: 15rpx;
+  margin-top: 10rpx;
+  background: #FAF8FB;
+}
+.whicthDay{
+  width: 100%;
+  height:220rpx;
+  display: flex;
+
+}
+.whicthDay:nth-child(1){
+  margin-top: 20rpx;
+}
+.dayLeft{
+  width:34%;
+  height:100%;
+  border-right: 6rpx solid #EEEEEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dayTime{
+  font-size: 28rpx;
+}
+.dayRight{
+  width:66%;
+  height:100%;
+  position: relative;
+}
+.dayRight .image{
+  width: 300rpx;
+  height: 180rpx;
+   /* transform:translate(30%,20rpx); */
+   position: relative;
+   left: 80rpx;
+   top: 15rpx;
+
+}
+.dayRight .videoBegin{
+  width:90rpx;
+  height:90rpx;
+  position: relative;
+  left: 190rpx;
+  top: -125rpx;
+}
+.dayCorrd{
+  width:30rpx;
+  height:30rpx;
+  border-radius: 15rpx;
+  background:#EEEEEE;
+  position: absolute;
+  transform:translate(-15rpx,95rpx);
+}
+button::after{
+  border:0;
+}
+button{
+  padding:0;
+  margin: 0;
+  background: white;
+  top:11rpx;
+
+}
+.videoShare{
+  padding-top: 10rpx;
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.shareButton{
+  width:100rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start
+}
+.shareButton button,.shareButton image{
+  width: 75%;
+  height: 75rpx;
+   border-radius:50%;
+  
+}
+.shareButton button image{
+   width: 100%;
+  height: 100%;
+}
+.shareButton button{
+  border-radius:50%;
+}
+.shareButton .text1{
+  margin-top: 10rpx;
+  font-size: 25rpx;
+}
+.shareButton .text2{
+  font-size: 24rpx;
+  color: gray;
+}

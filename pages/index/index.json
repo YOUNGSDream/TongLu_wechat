@@ -1,0 +1,7 @@
+{
+"navigationBarTitleText": "高空瞭望",
+  "usingComponents": {
+    "switch": "/components/switch/switch"
+  },
+  "enablePullDownRefresh": false
+}

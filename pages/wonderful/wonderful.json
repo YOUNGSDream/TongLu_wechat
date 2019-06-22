@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "switch": "/components/switch/switch"
+  },
+  "navigationBarTitleText": "精彩视频"
+}
